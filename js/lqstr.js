@@ -12,11 +12,71 @@
         var delay = 5000;
         var transition = 1000;
         var path = '/img/';
-//Active class for navigation //
-	$('nav a').click(function(){
-    	$('nav a').removeClass("active");
-    	$(this).addClass("active");
-	});
+
+        $('nav a').on('click', function() {
+
+    var scrollAnchor = $(this).attr('data-scroll'),
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+
+    $('body,html').animate({
+        scrollTop: scrollPoint
+    }, 500);
+
+    return false;
+
+})
+//Instagram//
+
+bcr_mig(
+    ins_id = 1702008206, // your user_id
+    ins_token = '1702008206.004528c.3f9b86fc128947bd9b71d26d68bc7e97' // your token
+);
+
+$(".ins_popup").fancybox({
+    openEffect : 'fade',
+    closeEffect : 'fade'
+});
+
+$("#back-top").hide();
+    
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
+
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('nav').addClass('fixed');
+        $('.outwrapper section').each(function(i) {
+            if ($(this).position().top <= windscroll - 20) {
+                $('nav a.active').removeClass('active');
+                $('nav a').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+
+        $('nav').removeClass('fixed');
+        $('nav a.active').removeClass('active');
+        $('nav a:first').addClass('active');
+    }
+
+}).scroll();
 // Build our slideshow //
         $('.image-block').each(function () {
             var imageBlock = $(this),
@@ -105,6 +165,21 @@
                 }
             });
         });
+
+        $( "#dialog_trigger" ).click(function() {
+$( "#dialog" ).dialog( "open" );
+});
+$("#dialog").dialog({
+    autoOpen: false,
+    position: 'center' ,
+    title: 'Book Now',
+    draggable: false,
+    width : 960,
+    height : 750,
+    resizable : true,
+    modal : true,
+});
+
 
         function formResponse(m,t) {
             var p = $('<p/>', { text: m, 'class': 'form-message' }).appendTo($('#enquiry'));
