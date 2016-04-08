@@ -11,7 +11,7 @@
 
         var delay = 5000;
         var transition = 1000;
-        var path = '/img/';
+        var path = 'img/';
 
         $('nav a').on('click', function() {
 

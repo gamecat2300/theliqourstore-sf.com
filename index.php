@@ -15,9 +15,23 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
     <script src="js/modernizr-2.6.2.js"></script>
     <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="google-site-verification" content="qijAA1tEHYbBp6kC4KHfd2auDfcFJW1FXx9nNTyw6fw" />
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -48,37 +62,29 @@
             </div>
         </header>
         <div class="image-block b1">
-             <span data-image="theliquorstore-a01">
+             <span data-image="bannerImages/kaosoi">
             </span>
-             <span data-image="theliquorstore-a03">
+             <span data-image="bannerImages/sayhello">
             </span>
-             <span data-image="theliquorstore-a04">
+             <span data-image="bannerImages/samosa">
             </span>
-             <span data-image="theliquorstore-a05">
+             <span data-image="bannerImages/thesea">
             </span>
-             <span data-image="theliquorstore-a06">
+             <span data-image="bannerImages/boston">
             </span>
-             <span data-image="theliquorstore-a07">
+             <span data-image="bannerImages/tartar">
             </span>
-            <span data-image="theliquorstore-a01">
+            <span data-image="bannerImages/rockfish">
             <!--div class="description">
                 <h2>I'm gonna make him an offer he can't refuse</h2>
                 <p>Farfalle + Uni-Butter + Caviar + Porcini pop-corn</p>
             </div -->
             </span>
-            <span data-image="theliquorstore-b01">
+            <span data-image="bannerImages/poke">
             </span>
-            <span data-image="theliquorstore-01">
+            <span data-image="bannerImages/scallop">
             </span>
-            <span data-image="theliquorstore-02">
-            </span>
-            <span data-image="theliquorstore-03">
-            </span>
-            <span data-image="theliquorstore-06">
-            </span>
-            <span data-image="theliquorstore-04">
-            </span>
-            <span data-image="theliquorstore-05">
+            <span data-image="bannerImages/babylift">
             </span>
             <!-- <div id="navigationarrows" style="position:absolute;top:10px;z-index:900">
                 <div class="previous">prev</div><div id="next">next</div>
@@ -105,8 +111,8 @@
         </section>
           <section id="events">
          <div class="image-block b2">
-                        <span data-image="theliquorstore-a08"></span>
-                        <span data-image="theliquorstore-08"></span>
+                        <span data-image="events/theliquorstore-a08"></span>
+                        <span data-image="events/theliquorstore-08"></span>
         </div>
             <div class="wrapper" >
             <a name="shipwreck"></a>
@@ -256,9 +262,9 @@
         </section>
         <section id="services" class="last-child">
          <div class="image-block b2">
-             <span data-image="theliquorstore-07a"></span>
-             <span data-image="theliquorstore-b07"></span>
-             <span data-image="theliquorstore-07"></span>
+             <span data-image="service/theliquorstore-07a"></span>
+             <span data-image="service/theliquorstore-b07"></span>
+             <span data-image="service/theliquorstore-07"></span>
             <!--span data-image="theliquorstore-07a"></span -->
         </div>
             <div class="wrapper">
@@ -298,8 +304,8 @@
         </section>
         <section id="about-me" class="first-child">
          <div class="image-block b2">
-            <span data-image="about-steve-hubbard"></span>
-            <span data-image="about-steve-hubbard1"></span>
+            <span data-image="about/about-steve-hubbard"></span>
+            <span data-image="about/about-steve-hubbard1"></span>
         </div>
             <div class="wrapper">
                 <h2>Chef</h2><br /><br />
