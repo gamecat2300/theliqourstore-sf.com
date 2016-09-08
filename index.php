@@ -1,20 +1,39 @@
-<!DOCTYPE html>
+<?php
+function sanitize_output($buffer) {
+    $search = array(
+        '/\>[^\S ]+/s',  // strip whitespaces after tags, except space
+        '/[^\S ]+\</s',  // strip whitespaces before tags, except space
+        '/(\s)+/s'       // shorten multiple whitespace sequences
+    );
+    $replace = array(
+        '>',
+        '<',
+        '\\1'
+    );
+    $buffer = preg_replace($search, $replace, $buffer);
+    return $buffer;
+}
+ob_start("sanitize_output");
+?>
+<!doctype html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>The Liquor Store</title>
     <meta name="Description" content="Global comfort foods and innovative cooking concepts by Steven J. Hubbard & Friends. With an emphasis on modern cooking techniques combined with with traditional practices. A popup based in San francisco Ca.">
     <meta name="Keywords" content="pop-up, san francisco, global comfort food, restaurant,steven hubbard,steve,hubbard,private pop-up,comfort,food,the liqour store,the liqour store ssan francisco">
-    <link rel="alternate" type="application/rss+xml" title="The Liquor Store San Francisco &raquo; Feed" href="http://www.theliquorstore-sf.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="The Liquor Store San Francisco &raquo; Feed" href="//www.theliquorstore-sf.com/feed/" />
 <!-- IE Mobile 10.0 rendering bug fix -->
     <script>(function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();</script>
     <meta charset="utf-8">
     <meta name="revisit-after" content="3 days" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
     <script src="js/modernizr-2.6.2.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+    <link rel='canonical' href='//www.theliquorstore-sf.com/' />
+    <link rel='shortlink' href='//www.theliquorstore-sf.com/' />
     <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -42,7 +61,7 @@
 </script>
 </head>
 <body>
-    <h1 style="display:none">The Liqour Store</h1>
+    <!--h1 style="display:none">The Liqour Store</h1 -->
     <div>
         <nav>
             <ul>
@@ -58,7 +77,7 @@
            <div class="outwrapper">
         <header id="home">
             <div class="wrapper">
-                <img src="img/theliquorstore-logo.png" alt="The Liquor Store | San Francisco, Events &amp; Design" class="mast-logo" />
+               <h1 id="logo"><img src="img/theliquorstore-logo.png" title="The Liquor Store" rel="home" alt="The Liquor Store" class="mast-logo" /></h1>
             </div>
         </header>
         <div class="image-block b1">
@@ -98,7 +117,7 @@
                         <p>
                         The Liquor Store is a theme-based private dining experience in San Francisco, our aim is to create the utmost amazing food based experience based on whatever has recently inspired us. Whether it be Mob films, South-East Asian Black OPS, The Early Roman Empire, Airplane dining circa 1968, etc.</p>
                         <p>
-                          Like all good restaurants we are passionate about our ingredients. We work with great suppliers and like-minded Bay Area producers whose focus is on quality and sustainability. 
+                          Like all good restaurants we are passionate about our ingredients. We work with great suppliers and like-minded Bay Area producers whose focus is on quality and sustainability.
                         </p>
                     </div>
                     <div>
@@ -116,28 +135,28 @@
         </div>
             <div class="wrapper" >
             <a name="shipwreck"></a>
-             <br /><br /><br /><h2 name="shipwrecked">Death & Taxes</h2><br /><br />
+             <br /><br /><br /><h2 name="shipwrecked">the restaurant at the end of the universe</h2><br /><br />
                 <div class="space-after">
                     <div>
                         <p class="date">
-                           April 16th, 2016 7PM
+                            October 15th 2016 7PM
                         </p>
                         <p style="text-align: center;">
-                         In the early days of the Roman Republic, public taxes consisted of modest assessments on owned wealth and property. The tax rate under normal circumstances was 1% and sometimes would climb as high as 3% in situations such as war. These modest taxes were levied against land, homes and other real estate, slaves, animals, personal items and monetary wealth. Taxes were collected from individuals and, at times, payments could be refunded by the treasury for excess collections. With limited census accuracy, tax collection on individuals was a difficult task at best.
+                          7 Tastes Inspired by Interstellar Travel
                         </p>
 
                         <p style="text-align:center">
                         <div class="sample-menus space-after">
                             <ul>
                             <li>
-                                <a href="/menus/deathandtaxes.html"><span>The Menu</span></a>
+                                <a href="/menus/endoftheuniverse.html"><span>The Menu</span></a>
                             </li>
                             </ul>
                         </div>
                     </p>
                     <p style="text-align:center">
-                        <!--button id="dialog_trigger" class="btn">Book Now</button -->
-                        <a href="javascript:void(0)" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=16932577796" alt="Eventbrite - THE GREAT EXHIBITION - 6 Tastes Inspired by World's fairs, Technological Utopianism, Nation Branding & A large Glass of Absinthe" /></a>
+                        <button id="dialog_trigger" class="btn">Book Now</button -->
+                        <a href="//www.eventbrite.com/e/the-restaurant-at-the-end-of-the-universe-tickets-27519194652" target="_blank"><img src="//www.eventbrite.com/custombutton?eid=19201248451" alt="Eventbrite - The Great Exhibition" /></a -->
                     </p>
                     </div>
                 </div>
@@ -145,11 +164,30 @@
             </div>
         </section>
         <section id="sample-menus">
+
             <div class="wrapper">
                 <h2>Past Events</h2><br /><br />
-                     <div class="multi-columns">
-                        <div>
-                             <h3>Shipwrecked Part II</h3>
+                <div class="multi-columns">
+                   <div>
+                  <h3>the great exhibition</h3>
+                   <p class="date">
+                       September 1st 2016
+                   </p>
+                   <p>
+                     6 Tastes Inspired by World's Fairs, Technological Utopianism, National Branding & a large Glass of Absinthe.
+                   </p>
+
+                   <p style="text-align:center">
+                   <div class="sample-menus space-after">
+                       <ul>
+                       <li>
+                           <a href="/menus/greatExhibition.html"><span>The Menu</span></a>
+                       </li>
+                       </ul>
+                   </div>
+              </div>
+                <div>
+                  <h3>Shipwrecked Part II</h3>
                         <p class="date">
                             October 3rd 2015 7PM
                         </p>
@@ -157,7 +195,6 @@
                             Just sit right back and take a trip with an 7 course tasting menu located in the Santa Cruz Mountains. 7 tastes inspired by shipwrecks in the East.
                         </p>
 
-                        <p style="text-align:center">
                         <div class="sample-menus space-after">
                             <ul>
                             <li>
@@ -165,29 +202,29 @@
                             </li>
                             </ul>
                         </div>
-                    </p>
-                   </div>
-                        <div>
-                             <h3>Shipwrecked</h3>
-                        <p class="date">
-                            August 15th 2015 7PM
-                        </p>
-                        <p>
-                            Just sit right back and take a trip with an 8 course tasting menu located in a underground open restaurant located in DogPatch. Inspired by Stories of Renegades, Castaways, Waifs, Exiles, Tropical Storms & Rum are the driving themes for tonight's event. Great Music, Mesmerizing Visuals and an Immersive and interactive environment with wonderful company.
-                        </p>
-
-                        <p style="text-align:center">
-                        <div class="sample-menus space-after">
-                            <ul>
-                            <li>
-                                <a href="/menus/shipwrecked.html"><span>The Menu</span></a>
-                            </li>
-                            </ul>
-                        </div>
-                    </p>
-                   </div>
+                      </div>
                     </div>
-                     <div class="multi-columns">
+                <div class="multi-columns">
+                  <div>
+                  <h3>Shipwrecked</h3>
+                    <p class="date">
+                      August 15th 2015 7PM
+                    </p>
+                    <p>
+                      Just sit right back and take a trip with an 8 course tasting menu located in a underground open restaurant located in DogPatch. Inspired by Stories of Renegades, Castaways, Waifs, Exiles, Tropical Storms & Rum are the driving themes for tonight's event. Great Music, Mesmerizing Visuals and an Immersive and interactive environment with wonderful company.
+                    </p>
+                    <p style="text-align:center">
+                      <div class="sample-menus space-after">
+                        <ul>
+                          <li>
+                            <a href="/menus/shipwrecked.html"><span>The Menu</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </p>
+                   </div>
+
+
                         <div>
                         <h3>Cinematic Italian Mob Tribute Dinner</h3>
                         <p class="date">
@@ -206,7 +243,8 @@
                             </div>
                         </p>
                         </div>
-
+                      </div>
+     <div class="multi-columns">
                        <div>
                         <h3>Air America</h3>
                         <p class="date">
@@ -225,11 +263,9 @@
                             </div>
                          </p>
                         </div>
-                    </div>
 
-                    <div class="multi-columns">
 
-                       
+
                         <div>
                         <h3>Death and Taxes</h3>
                         <p class="date">
@@ -328,13 +364,13 @@
             <div class="lets-be-social">
                 <ul>
                     <li>
-                        <a href="http://theliquorstore-sf.tumblr.com/" target="_blank" class="twitter">Follow us on Twitter</a></li>
+                        <a href="//twitter.com/liquorstoresf" target="_blank" class="twitter">Follow us on Twitter</a></li>
                     <li>
-                        <a href="https://www.facebook.com/theliquorstoresf" target="_blank" class="facebook">Be our Facebook friend</a></li>
-                    <!--li>
-                        <a href="https://plus.google.com/" target="_blank" class="google">Google+</a></li -->
+                        <a href="//www.facebook.com/theliquorstoresf" target="_blank" class="facebook">Be our Facebook friend</a></li>
                     <li>
-                        <a href="https://instagram.com/TheLiquorStore_sf" target="_blank" class="instagram">Our visual likes</a></li>
+                        <a href="//theliquorstore-sf.tumblr.com/" target="_blank" class="google">Follow us on Tumblr</a></li>
+                    <li>
+                        <a href="//instagram.com/TheLiquorStore_sf" target="_blank" class="instagram">Our visual likes</a></li>
                 </ul>
             </div>
         </section>
@@ -378,7 +414,7 @@
 </form>
 </div>
             <p>
-                All content &copy; 2015 The Liqour Store. Website by <a href="http://www.nationalflashback.com/" target="_blank">N(f)K</a>&nbsp;&nbsp;Photography by <a href="#" rel="author">Scott Burgess + Nicholas Alv</a>.
+                All content &copy; 2015 The Liqour Store. Website by <a href="//www.nationalflashback.com/" target="_blank">N(f)K</a>&nbsp;&nbsp;Photography by <a href="#" rel="author">Scott Burgess + Nicholas Alv</a>.
             </p>
             </div>
         </footer>
@@ -388,17 +424,17 @@
         <div>
             <p>
                 Attention: the-liqour-store Events requires Javascript. <br />
-                Please <a href="http://enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
+                Please <a href="//enable-javascript.com/">enable javascript</a> to use this site without issue.</p>
         </div>
     </div>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
     <script>(window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>'));</script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
     <script>(window.jQuery || document.write('<script src="js/jquery-ui.min.js"><\/script>'));</script>
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"6137ef4e036c3c7aad3abce4b","lid":"a0d303d235"}) })</script>
     <script src="js/jquery.localscroll-1.2.7-min.js"></script>
     <script src="js/jquery.scrollto-1.4.3.1-min.js"></script>
-    <script src="js/my-instagram-gallery.js"></script>
+    <script src="js/my-instagram-galleryNew.js"></script>
     <script src="js/jquery.inview.js"></script>
     <script src="js/jquery.parallax-1.1.3.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>

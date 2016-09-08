@@ -29,6 +29,7 @@
 
 bcr_mig(
     ins_id = 1702008206, // your user_id
+    ins_count = 14, // Count of media to return
     ins_token = '1702008206.004528c.3f9b86fc128947bd9b71d26d68bc7e97' // your token
 );
 
@@ -38,7 +39,7 @@ $(".ins_popup").fancybox({
 });
 
 $("#back-top").hide();
-    
+
     // fade in #back-top
     $(function () {
         $(window).scroll(function () {
