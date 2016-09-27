@@ -722,6 +722,163 @@ section#social
     background-position: -150px -50px;
 }
 
+
+
+/* Air America */
+#airamerica{
+	background: transparent url('../img/background.jpg') no-repeat center top;
+	min-height:750px;
+	min-width:500px
+}
+
+#airamerica dd{
+	color:#000000
+}
+
+.redacted {
+    color: black;
+    background-color: black;
+    white-space:nowrap;
+    -moz-transform: rotate(.8deg) skewx(-12deg);
+    -moz-box-shadow:3px 0 2px #444;
+    border:1px dotted #555;
+    background: -moz-linear-gradient(180deg, #000, #222);
+    cursor: pointer
+}
+
+/* Add a few more selectors with slightly varying styles */
+.redacted:first-child {
+    -moz-transform: rotate(-.8deg);
+}
+.redacted:first-child + .redacted {
+    -moz-transform: rotate(3deg);
+}
+
+/* Highlight effect */
+.redacted::-moz-selection {
+    background:#e6ff3f;
+}
+
+dd .redacted:hover {
+    color: black;
+    background-color: #ffffff;
+    white-space:nowrap;
+    -moz-transform: rotate(.8deg) skewx(-12deg);
+    -moz-box-shadow:3px 0 2px #444;
+    border:0px dotted #555;
+    background: -moz-linear-gradient(180deg, #000, #222);
+}
+
+/* Title helper */
+
+.fancybox-title
+{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif !important;
+    visibility: hidden;
+    position: relative;
+    text-shadow: none;
+    z-index: 8050;
+}
+.fancybox-opened .fancybox-title
+{
+    visibility: visible;
+}
+.fancybox-title-float-wrap
+{
+    position: absolute;
+    right: 50%;
+    z-index: 8050;
+    text-align: center;
+}
+.fancybox-title-float-wrap .child
+{
+    display: inline-block;
+    margin-right: -100%;
+    padding: 20px 20px !important;
+    background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+    background: rgba(0, 0, 0, 1) !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    text-shadow: 0 1px 2px #222;
+    color: #FFF;
+    font-weight: bold;
+    line-height: 24px;
+    white-space: nowrap;
+}
+.fancybox-title-outside-wrap
+{
+    position: relative;
+    margin-top: 10px;
+    color: #fff;
+}
+.fancybox-title-inside-wrap
+{
+    padding-top: 10px;
+}
+.fancybox-title-over-wrap
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    background: #000;
+    background: rgba(0, 0, 0, .8);
+}
+
+/*Newsletter */
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+
+/*BackToTop*/
+#back-top {
+    position: fixed;
+    bottom: 30px;
+    margin-left: 88%;
+}
+
+#back-top a {
+    width: 108px;
+    display: block;
+    text-align: center;
+    font: 11px/100% Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #bbb;
+
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover {
+    color: #000;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+    width: 108px;
+    height: 108px;
+    display: block;
+    margin-bottom: 7px;
+    background: #ddd url(../img/up-arrow.png) no-repeat center center;
+
+    /* rounded corners */
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    /* transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover span {
+    background-color: #777;
+}
+
+
+/*** FancyBox ***/
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
@@ -914,18 +1071,18 @@ section#social
 
 .fancybox-lock
 {
-    overflow: hidden !important;
+  /*  overflow: hidden !important; */
     width: auto;
 }
 
 .fancybox-lock body
 {
-    overflow: hidden !important;
+    /*  overflow: hidden !important; */
 }
 
 .fancybox-lock-test
 {
-    overflow-y: hidden !important;
+    /*  overflow: hidden !important; */
 }
 
 .fancybox-overlay
@@ -961,158 +1118,6 @@ section#social
     border-radius: 5px !important;
 }
 
-/* Air America */
-#airamerica{
-	background: transparent url('../img/background.jpg') no-repeat center top;
-	min-height:750px;
-	min-width:500px
-}
-
-#airamerica dd{
-	color:#000000
-}
-
-.redacted {
-    color: black;
-    background-color: black;
-    white-space:nowrap;
-    -moz-transform: rotate(.8deg) skewx(-12deg);
-    -moz-box-shadow:3px 0 2px #444;
-    border:1px dotted #555;
-    background: -moz-linear-gradient(180deg, #000, #222);
-    cursor: pointer
-}
-
-/* Add a few more selectors with slightly varying styles */
-.redacted:first-child {
-    -moz-transform: rotate(-.8deg);
-}
-.redacted:first-child + .redacted {
-    -moz-transform: rotate(3deg);
-}
-
-/* Highlight effect */
-.redacted::-moz-selection {
-    background:#e6ff3f;
-}
-
-dd .redacted:hover {
-    color: black;
-    background-color: #ffffff;
-    white-space:nowrap;
-    -moz-transform: rotate(.8deg) skewx(-12deg);
-    -moz-box-shadow:3px 0 2px #444;
-    border:0px dotted #555;
-    background: -moz-linear-gradient(180deg, #000, #222);
-}
-
-/* Title helper */
-
-.fancybox-title
-{
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif !important;
-    visibility: hidden;
-    position: relative;
-    text-shadow: none;
-    z-index: 8050;
-}
-.fancybox-opened .fancybox-title
-{
-    visibility: visible;
-}
-.fancybox-title-float-wrap
-{
-    position: absolute;
-    right: 50%;
-    z-index: 8050;
-    text-align: center;
-}
-.fancybox-title-float-wrap .child
-{
-    display: inline-block;
-    margin-right: -100%;
-    padding: 20px 20px !important;
-    background: transparent; /* Fallback for web browsers that doesn't support RGBa */
-    background: rgba(0, 0, 0, 1) !important;
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
-    border-radius: 0px !important;
-    text-shadow: 0 1px 2px #222;
-    color: #FFF;
-    font-weight: bold;
-    line-height: 24px;
-    white-space: nowrap;
-}
-.fancybox-title-outside-wrap
-{
-    position: relative;
-    margin-top: 10px;
-    color: #fff;
-}
-.fancybox-title-inside-wrap
-{
-    padding-top: 10px;
-}
-.fancybox-title-over-wrap
-{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: #fff;
-    padding: 10px;
-    background: #000;
-    background: rgba(0, 0, 0, .8);
-}
-
-/*Newsletter */
-#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-
-/*BackToTop*/
-#back-top {
-    position: fixed;
-    bottom: 30px;
-    margin-left: 88%;
-}
-
-#back-top a {
-    width: 108px;
-    display: block;
-    text-align: center;
-    font: 11px/100% Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #bbb;
-
-    /* transition */
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
-}
-#back-top a:hover {
-    color: #000;
-}
-
-/* arrow icon (span tag) */
-#back-top span {
-    width: 108px;
-    height: 108px;
-    display: block;
-    margin-bottom: 7px;
-    background: #ddd url(../img/up-arrow.png) no-repeat center center;
-
-    /* rounded corners */
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-
-    /* transition */
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
-}
-#back-top a:hover span {
-    background-color: #777;
-}
 
 /*Retina graphics!*/
 @media

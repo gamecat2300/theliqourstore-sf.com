@@ -31,7 +31,7 @@ ob_start("sanitize_output");
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
     <script src="js/modernizr-2.6.2.js"></script>
-    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/>
+    <!--link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"/ -->
     <link rel='canonical' href='//www.theliquorstore-sf.com/' />
     <link rel='shortlink' href='//www.theliquorstore-sf.com/' />
     <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
@@ -154,10 +154,10 @@ ob_start("sanitize_output");
                             </ul>
                         </div>
                     </p>
-                    <p style="text-align:center">
-                        <button id="dialog_trigger" class="btn">Book Now</button -->
-                        <a href="//www.eventbrite.com/e/the-restaurant-at-the-end-of-the-universe-tickets-27519194652" target="_blank"><img src="//www.eventbrite.com/custombutton?eid=19201248451" alt="Eventbrite - The Great Exhibition" /></a -->
-                    </p>
+                    <!-- p style="text-align:center">
+                        <button id="dialog_trigger" class="btn">Book Now</button>
+                        <a href="//www.eventbrite.com/e/the-restaurant-at-the-end-of-the-universe-tickets-27519194652" target="_blank"><img src="//www.eventbrite.com/custombutton?eid=19201248451" alt="Eventbrite - The Great Exhibition" /></a>
+                    </p-->
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link href="//fonts.googleapis.com/css?family=Didact+Gothic|Orbitron|Josefin+Slab|Monoton|Pacifico" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Orbitron|Anton|Comfortaa|Pacifico|Kreon" rel="stylesheet">
 	<style type="text/css" media="screen">
 
 		/* http://meyerweb.com/eric/tools/css/reset/
@@ -35,12 +35,6 @@
 		}
 		body {
 			line-height: 1;
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-size: 100%;
-			font: inherit;
-			vertical-align: baseline;
 		}
 		ol, ul {
 			list-style: none;
@@ -60,39 +54,57 @@
 
 		/* ------- */
 
-		body { color: #333; padding-bottom: 20%; line-height: 150%; height: 125%; font-size: 125%; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-weight: 400; letter-spacing: .01rem; background-size: cover; background-repeat: no-repeat; background-position: center bottom; text-align: center; font-family: 'Didact Gothic', serif; background-image: url('img/space2.jpg'); }
-		body section { margin-top: 25px; }
+		body { color: #333; line-height: 150%; height: 100%; font-size: 150%; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-weight: 400; letter-spacing: .01rem; text-align: center; font-family: 'Comfortaa', serif; background-image: url('img/restaurant_bg.jpg'); }
+		section { margin-top: 25px; }
 
-		#wrapper { height: 100%; width: 800px; margin: 0 auto; padding: 0 20px; text-align: left; overflow: scroll; }
+		#wrapper { height: 100%; width: 100%; text-align: center; position: relative; }
 
-		.container { height: 100%; }
+		#overlay { height: 100%; width: 100%; background-image: url('img/r_bottom3.png'); background-repeat: no-repeat; background-position: center bottom; position: fixed; z-index: 2; }
+
+		//*.container { padding-bottom: 300px; height: auto; width: 100%; position: absolute; z-index: 1; text-align: center; }
+
+		.content { width: 800px; height: 100%; margin: 0 auto; text-align: center; }**/
 
 		.logo { margin-top: 5%; }
-		.intro h2, .intro p{text-align: center}
-		.event {text-align: center}
-		.event h1 { font-size: 200%; font-weight: 700; color: #e62a33; font-family: 'Orbitron'; line-height: 125%;text-align: center}
+		.logo img { display: inline-block; }
+
+		.event {}
+		.event h1 { font-size: 300%; font-weight: 700; color: #e62a33; font-family: 'Orbitron'; line-height: 125%;}
+
+		.intro h2 { font-size: 100%; font-weight: 700; color: #fff; text-shadow: 0 0 3px #fff; font-family: 'Comfortaa'; }
 
 		.course { padding-bottom: 25px; border-bottom: 1px dotted #999; text-align: center; }
-		.course h3 { font-size: 150%; font-weight: 700; font-family: 'Orbitron'; color: #384394;text-align: center }
-		.course .info { color: #999;text-align: center}
-		.course .offering { font-weight: 300; font-family: 'Orbitron'; color: #5b9438;text-align: center }
-		.course.six { border: none; }
+		.course h3 { font-size: 150%; font-weight: 700; font-family: 'Kreon'; color: #FFFFFF; text-shadow: 0 0 3px #fff; }
+		.course .info { color: #963b8a; font-family: 'Comfortaa'; }
+		.course .offering { font-weight: 300; font-family: 'Pacifico'; color: #73c741; }
+		.course.eight { border: none; }
 
-		.button { padding-bottom: 50px; margin: 65px 0; clear: both; position: relative; text-align: center}
-		.button a { margin-right: 15px; padding: 25px; color: #fff; text-transform: uppercase; font-family: 'Orbitron'; font-weight: 700; border-radius: 15px; font-size: 200%; text-decoration: none; display: inline-block; }
+		.button { padding-bottom: 50px; margin: 65px 0; clear: both; position: relative;z-index: 999 }
+		.button a { margin-right: 15px; padding: 25px; color: #fff; text-transform: uppercase; font-family: 'Orbitron'; font-weight: 700; border-radius: 15px; font-size: 200%; text-decoration: none; display: inline-block;position: relative;z-index: 999 }
 		.tickets { background-color: #e52932; }
 		.music { background-color: #7a57d3; }
 
+		.time { margin: 25px 0; padding: 25px 0; border-top: 1px dotted orange; border-bottom: 1px dotted orange; text-align: center; }
+		.date { color: orange; font-size: 150%; font-family: 'Pacifico'; font-weight: 700; display: inline-block; }
+
 		@media (max-width: 640px) {
-			.course { font-size: 200%; line-height: 150%; }
-			#wrapper { width: auto !important; }
+			.event h1 { font-size: 100% !important; }
+			.container { padding: 0 15px; width: auto;}
+			.logo img { width: 60%; float: none !important; }
+			.course { line-height: 150%; }
+			#overlay { background-size: 100% 20%; }
+			.content, #wrapper { width: auto !important; }
+			.event h1 { font-size: 150%; }
+			.button a { margin: 0px; padding: 15px; font-weight: 700; border-radius: 10px; font-size: 100%; }
+
 		}
+
 
 	</style>
 </head>
 <body>
 	<div id="wrapper">
-
+		<div id="overlay"></div>
 		<div class="container">
 
 			<p class="logo"><a href="//theliquorstore-sf.com"><img src="../img/Logo.svg" width="300" /></a>
@@ -145,7 +157,7 @@
 			</section>
 
 			<section class="course seven">
-					<h3>BEAUJIE</h3>
+					<h3>EAUJIE</h3>
 					<p class="info">(Dune | Atreides)</p>
 					<p class="offering">Tagine + Roasted Root Vegetable + Feta + Sous-Vide Grilled Squid</p>
 			</section>
@@ -156,7 +168,7 @@
 			</section>
 
 			<section class="button">
-				<a href="//www.eventbrite.com/e/the-restaurant-at-the-end-of-the-universe-tickets-27519194652" class="tickets">Tickets!</a> <a href="//play.spotify.com/user/chemtrials/playlist/51sOIn4hc1eAlVJ9rdPQLs?play=true&utm_source=open.spotify.com&utm_medium=open" class="music">Music!</a>
+				<a href="//www.eventbrite.com/e/the-restaurant-at-the-end-of-the-universe-tickets-27519194652" class="tickets">Tickets!</a> <a href="//play.spotify.com/user/chemtrials/playlist/03ZvXIgGxKSpDykdAFKW3U" class="music">Music!</a>
 			</section>
 
 		</div>
